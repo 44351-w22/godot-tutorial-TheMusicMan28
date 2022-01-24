@@ -26,6 +26,7 @@ animations = [ {
 } ]
 
 [node name="Mob" type="RigidBody2D"]
+gravity_scale = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.75, 0.75 )
