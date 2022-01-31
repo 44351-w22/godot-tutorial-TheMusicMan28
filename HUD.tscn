@@ -49,9 +49,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Message Timer" type="Timer" parent="."]
+[node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="timeout" from="Message Timer" to="." method="_on_Message_Timer_timeout"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_Message_Timer_timeout"]
