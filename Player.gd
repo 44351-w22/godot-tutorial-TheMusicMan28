@@ -15,6 +15,7 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2()
 	
+	#arrow keys input
 	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
 	if Input.is_action_pressed('ui_left'):
