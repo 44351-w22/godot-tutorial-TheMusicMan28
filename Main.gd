@@ -12,6 +12,7 @@ func new_game():
 	score = 0
 	lives = 3
 	$Player.update_lives(lives)
+	$HUD.update_lives(lives)
 	$Spiral.set_speed_scale(5)
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
@@ -51,8 +52,15 @@ func _on_MobTimer_timeout():
 	mob.rotation = direction
 
 	# Choose the velocity.
-	var velocity = Vector2(rand_range(150.0, 250.0), 0.0)
-	mob.linear_velocity = velocity.rotated(direction)
+	if lives == 3:
+		var velocity = Vector2(rand_range(150.0, 250.0), 0.0)
+		mob.linear_velocity = velocity.rotated(direction)
+	if lives == 2:
+		var velocity = Vector2(rand_range(350.0, 500.0), 0.0)
+		mob.linear_velocity = velocity.rotated(direction)
+	if lives == 1:
+		var velocity = Vector2(rand_range(1000.0, 2000.0), 0.0)
+		mob.linear_velocity = velocity.rotated(direction)
 	
 	
 func _on_Player_hit():
