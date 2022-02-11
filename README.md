@@ -4,7 +4,7 @@ I followed this tutorial (https://docs.godotengine.org/en/latest/getting_started
 
   1: Made it so that enemy eyes change between Red and Blue.  
   2: Allow the user to use WASD as input as well as arrow keys.  
-  3: Added animated Spiral for background (PLEASE DO NOT MAKE YOURSELF SICK).  
+  3: Added animated Spiral background that spins faster each life you lose (PLEASE DO NOT MAKE YOURSELF SICK).  
   4: Allow the player to have 3 lives.  
   5: Play Wilhelm Scream on hit.  
   6: Remove all enemies when hit.  
