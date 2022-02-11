@@ -4,7 +4,7 @@
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://Mob.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://dodge_assets/art/House In a Forest Loop.ogg" type="AudioStream" id=5]
+[ext_resource path="res://dodge_assets/art/yakety-sax-music.mp3.mp3" type="AudioStream" id=5]
 [ext_resource path="res://dodge_assets/art/gameover.wav" type="AudioStream" id=6]
 [ext_resource path="res://dodge_assets/art/Spiral Background/frame_001_delay-0.04s.jpg" type="Texture" id=7]
 [ext_resource path="res://dodge_assets/art/Spiral Background/frame_002_delay-0.05s.jpg" type="Texture" id=8]
@@ -268,7 +268,7 @@ mob_scene = ExtResource( 3 )
 position = Vector2( 232, 365.75 )
 scale = Vector2( 2.00667, 2.09615 )
 frames = SubResource( 2 )
-frame = 189
+frame = 188
 speed_scale = 5.0
 playing = true
 
@@ -301,11 +301,12 @@ stream = ExtResource( 6 )
 
 [node name="WilhelmScream" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 246 )
+volume_db = 5.0
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 
-[connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="hit" from="Player" to="." method="_on_Player_hit"]
+[connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]

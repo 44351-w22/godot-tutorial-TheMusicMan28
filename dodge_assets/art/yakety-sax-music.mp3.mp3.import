@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/yakety-sax-music.mp3.mp3-eefe9bb998a122bcda5e4e4b8e686e0d.mp3str"
+
+[deps]
+
+source_file="res://dodge_assets/art/yakety-sax-music.mp3.mp3"
+dest_files=[ "res://.import/yakety-sax-music.mp3.mp3-eefe9bb998a122bcda5e4e4b8e686e0d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

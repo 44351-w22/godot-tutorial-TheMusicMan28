@@ -18,6 +18,7 @@ func new_game():
 	$HUD.update_score(score)
 	$HUD.show_message('Get Ready')
 	$Music.play()
+	
 
 
 func _on_ScoreTimer_timeout():
