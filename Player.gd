@@ -4,6 +4,7 @@ signal hit
 
 export var speed = 400 #number of pixels per second
 var screen_size #screen size. Duh
+var lives = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,11 +46,16 @@ func _process(delta):
 		$AnimatedSprite.flip_v = velocity.y > 0
 		$AnimatedSprite.flip_h = false
 
+func update_lives(livesIn):
+	lives = livesIn
 
 func _on_Player_body_entered(body):
-	hide()
-	emit_signal('hit')
-	$CollisionShape2D.set_deferred("disabled", true)
+	if lives <= 1:
+		hide()
+		emit_signal('hit')
+		$CollisionShape2D.set_deferred("disabled", true)
+	else:
+		emit_signal('hit')
 
 func start(pos):
 	position = pos

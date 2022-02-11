@@ -2,24 +2,16 @@ extends Node
 
 export(PackedScene) var mob_scene
 var score
+var lives
 var high_score = 0
 
 func _ready():
 	randomize()
 
-func game_over():
-	$ScoreTimer.stop()
-	$MobTimer.stop()
-	$HUD.show_game_over()
-	get_tree().call_group('mobs', 'queue_free')
-	$Music.stop()
-	$DeathSound.play()
-	if (score > high_score):
-		high_score = score
-		$HUD.update_high_score(high_score)
-
 func new_game():
 	score = 0
+	lives = 3
+	$Spiral.set_speed_scale(5)
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 	$HUD.update_score(score)
@@ -61,4 +53,23 @@ func _on_MobTimer_timeout():
 	mob.linear_velocity = velocity.rotated(direction)
 	
 	
-
+func _on_Player_hit():
+	get_tree().call_group('mobs', 'queue_free')
+	lives -= 1
+	$Player.update_lives(lives)
+	if lives <= 0:
+		$HUD.update_lives(lives)
+		$ScoreTimer.stop()
+		$MobTimer.stop()
+		$HUD.show_game_over()
+		get_tree().call_group('mobs', 'queue_free')
+		$Music.stop()
+		$DeathSound.play()
+		if (score > high_score):
+			high_score = score
+			$HUD.update_high_score(high_score)
+	else:
+		$HUD.update_lives(lives)
+		$HUD.show_lives_lost(lives)
+		$WilhelmScream.play()
+		$Spiral.set_speed_scale($Spiral.get_speed_scale() * 3)

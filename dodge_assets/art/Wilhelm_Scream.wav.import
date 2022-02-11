@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wilhelm_Scream.wav-fae3e67f473e29b7362c4e0c9d56761d.sample"
+
+[deps]
+
+source_file="res://dodge_assets/art/Wilhelm_Scream.wav"
+dest_files=[ "res://.import/Wilhelm_Scream.wav-fae3e67f473e29b7362c4e0c9d56761d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
