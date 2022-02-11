@@ -268,7 +268,7 @@ mob_scene = ExtResource( 3 )
 position = Vector2( 232, 365.75 )
 scale = Vector2( 2.00667, 2.09615 )
 frames = SubResource( 2 )
-frame = 81
+frame = 189
 speed_scale = 5.0
 playing = true
 
@@ -304,8 +304,8 @@ stream = ExtResource( 246 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 
-[connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="hit" from="Player" to="." method="game_over"]
+[connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]

@@ -11,6 +11,7 @@ func _ready():
 func new_game():
 	score = 0
 	lives = 3
+	$Player.update_lives(lives)
 	$Spiral.set_speed_scale(5)
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
