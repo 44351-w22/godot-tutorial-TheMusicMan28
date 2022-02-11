@@ -2,7 +2,7 @@ extends Node
 
 export(PackedScene) var mob_scene
 var score
-
+var high_score = 0
 
 func _ready():
 	randomize()
@@ -13,6 +13,9 @@ func game_over():
 	$HUD.show_game_over()
 	$Music.stop()
 	$DeathSound.play()
+	if (score > high_score):
+		high_score = score
+		$HUD.update_high_score(high_score)
 
 func new_game():
 	score = 0
