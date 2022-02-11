@@ -9,5 +9,6 @@ I followed this tutorial (https://docs.godotengine.org/en/latest/getting_started
   5: Play Wilhelm Scream on hit.
   6: Remove all enemies when hit
   7: Keep track of High Score (during playtime)
+  8: Changed background music
   
  Have fun!!!
