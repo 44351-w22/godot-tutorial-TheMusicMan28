@@ -50,6 +50,7 @@ func update_lives(livesIn):
 	lives = livesIn
 
 func _on_Player_body_entered(body):
+	body.queue_free()
 	if lives <= 1:
 		hide()
 		emit_signal('hit')
