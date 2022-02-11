@@ -7,8 +7,9 @@ I followed this tutorial (https://docs.godotengine.org/en/latest/getting_started
   3: Added animated Spiral background that spins faster each life you lose (PLEASE DO NOT MAKE YOURSELF SICK).  
   4: Allow the player to have 3 lives.  
   5: Play Wilhelm Scream on hit.  
-  6: Remove all enemies when hit.  
-  7: Keep track of High Score (during playtime).  
-  8: Changed background music.  
+  6: Remove all enemies when hit.
+  7: Enemies move faster each time you get hit.  
+  8: Keep track of High Score (during playtime).  
+  9: Changed background music.  
   
  Have fun!!!
