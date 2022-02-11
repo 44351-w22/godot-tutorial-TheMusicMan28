@@ -1,5 +1,4 @@
 # godot-tutorial-TheMusicMan28
-godot-tutorial-TheMusicMan28 created by GitHub Classroom
 
 I followed this tutorial (https://docs.godotengine.org/en/latest/getting_started/first_2d_game/index.html#prerequisites) and added some of my own modifications. Those changes include:
 
