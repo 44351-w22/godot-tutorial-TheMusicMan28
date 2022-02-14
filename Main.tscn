@@ -268,7 +268,7 @@ mob_scene = ExtResource( 3 )
 position = Vector2( 232, 365.75 )
 scale = Vector2( 2.00667, 2.09615 )
 frames = SubResource( 2 )
-frame = 127
+frame = 178
 speed_scale = 5.0
 playing = true
 
